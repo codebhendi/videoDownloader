@@ -1,0 +1,36 @@
+{
+   "background": {
+      "page": "extension/background.html"
+   },
+   
+   "browser_action" :
+  	{
+   	 	"default_icon" : "icon19c.png",
+    	"default_title" : "Bhendi's Downloader"
+  	},
+  	
+   "content_scripts": [{
+      "js": [ "video/content.js" ],
+	  "matches": ["http://*/*", "https://*/*"],
+      "all_frames": false,
+      "run_at": "document_start"
+   }],
+           	
+	"icons": {
+	    "16": "icon19b.png"
+	},
+   
+   "content_security_policy": "script-src 'self' https://my.startpage24.com https://www.google.com https://www.google.de https://connect.facebook.net/ ; object-src 'self'",
+   "default_locale": "en",
+   "icons": {
+      "16": "icon.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 2,
+   "incognito":"split",
+   "name": "__MSG_appName__",
+   "options_page": "startpage/index.html?options=1",
+   "permissions": [ "http://my.startpage24.com/", "webRequest","webRequestBlocking", "tabs", "storage", "management", "chrome://favicon/", "http://*/*", "https://*/*" ],
+   "version": "1.97.51",
+   "web_accessible_resources": [ "video/chromecastcheck.js", "startpage/index.html", "startpage/hu/L64P.js", "startpage/hu/helper.js", "startpage/3rd/jquery-min.js", "startpage/addOnVars.js", "startpage/data.js", "startpage/text.js", "startpage/addon.js", "startpage/addon.css"]
+}
